@@ -864,3 +864,66 @@ window.copyHardText = function(id, event) {
         startHardTimer();
     });
 }
+
+// =============== THEME TOGGLE LOGIC ===============
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+const themeIconSun = document.getElementById('themeIconSun');
+const themeIconMoon = document.getElementById('themeIconMoon');
+const themeIconAuto = document.getElementById('themeIconAuto');
+
+let currentThemeMode = localStorage.getItem('theme') || 'auto';
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function applyTheme(mode) {
+    let isDark;
+    
+    if (mode === 'auto') {
+        isDark = darkModeMediaQuery.matches;
+        if (themeIconSun) themeIconSun.style.display = 'none';
+        if (themeIconMoon) themeIconMoon.style.display = 'none';
+        if (themeIconAuto) themeIconAuto.style.display = 'block';
+    } else if (mode === 'dark') {
+        isDark = true;
+        if (themeIconSun) themeIconSun.style.display = 'none';
+        if (themeIconMoon) themeIconMoon.style.display = 'block';
+        if (themeIconAuto) themeIconAuto.style.display = 'none';
+    } else {
+        isDark = false;
+        if (themeIconSun) themeIconSun.style.display = 'block';
+        if (themeIconMoon) themeIconMoon.style.display = 'none';
+        if (themeIconAuto) themeIconAuto.style.display = 'none';
+    }
+
+    if (isDark) {
+        document.body.classList.remove('light-mode');
+    } else {
+        document.body.classList.add('light-mode');
+    }
+}
+
+function setThemeMode(mode) {
+    currentThemeMode = mode;
+    localStorage.setItem('theme', mode);
+    applyTheme(mode);
+}
+
+darkModeMediaQuery.addEventListener('change', () => {
+    if (currentThemeMode === 'auto') {
+        applyTheme('auto');
+    }
+});
+
+applyTheme(currentThemeMode);
+
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+        if (currentThemeMode === 'auto') {
+            setThemeMode('light');
+        } else if (currentThemeMode === 'light') {
+            setThemeMode('dark');
+        } else {
+            setThemeMode('auto');
+        }
+    });
+}
+
