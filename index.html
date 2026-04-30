@@ -3,141 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OPENLock | Privacy-First Password Manager & TOTP</title>
-    <meta name="description" content="OPENLock is a secure, local-first browser extension that combines a powerful Password Manager and TOTP Authenticator. No servers, no tracking, total control.">
+    <title>OPENLOCK // SECURE.VAULT</title>
+    <meta name="description" content="Utilitarian security. Local-only. Zero trust. Form follows function.">
     <link rel="icon" type="image/png" href="https://i.ibb.co/mVw2yfD5/icon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
-
-    <nav>
-        <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-            OPEN<span>Lock</span>
-        </div>
-        <div class="nav-links">
-            <a href="#features">Features</a>
-            <a href="#security">Security</a>
-            <a href="https://github.com/Hussein35847/OPENLock" target="_blank">GitHub</a>
-        </div>
-        <a href="https://github.com/Hussein35847/OPENLock/releases/download/OPENLock/OPENLock.rar" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Download</a>
-    </nav>
-
-    <header class="hero">
-        <h1>Your Secrets, <span class="gradient-text">Only Yours.</span></h1>
-        <p>A privacy-first browser extension combining a secure Password Manager and TOTP (2FA) Authenticator in one lightweight, local-only tool.</p>
-        <div class="cta-group">
-            <a href="https://github.com/Hussein35847/OPENLock/releases/download/OPENLock/OPENLock.rar" class="btn btn-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                Download Extension
-            </a>
-            <a href="https://github.com/Hussein35847/OPENLock" class="btn btn-secondary" target="_blank">
-                View Source
-            </a>
-        </div>
-        <div class="hero-image-container" style="margin-top: 4rem; position: relative;">
-            <img src="hero.png" alt="OPENLock Interface" style="width: 100%; max-width: 800px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 1px solid var(--glass-border);">
+    <header class="swiss-header">
+        <div class="header-main">
+            <div class="logo-area">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span class="logo-text">PassVault</span>
+            </div>
+            <nav class="swiss-nav">
+                <a href="#generate">Generator</a>
+                <a href="#specs">Security</a>
+                <a href="#source">About</a>
+            </nav>
         </div>
     </header>
 
-    <section id="features" class="features">
-        <div class="section-title">
-            <h2>Everything you need.</h2>
-            <p>Powerful tools to manage your digital life securely.</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+    <main>
+        <section class="swiss-hero">
+            <div class="hero-text-wrap">
+                <h1>Secure passwords,<br>generated locally.</h1>
+                <p>Fast. Private. No tracking. Your passwords never leave your device.</p>
+                <div class="hero-cta">
+                    <a href="https://github.com/Hussein35847/OPENLock/releases/download/OPENLock/OPENLock.rar" class="btn-swiss-primary">Download Extension</a>
                 </div>
-                <h3>Password Manager</h3>
-                <p>Store and manage credentials securely with quick copy and autofill-ready structure. Everything stays on your device.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                </div>
-                <h3>TOTP Generator (2FA)</h3>
-                <p>Generate 6-digit codes for services like GitHub and Google with a built-in countdown timer. No separate app needed.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3L15.5 7.5z"></path></svg>
-                </div>
-                <h3>AES-GCM Encryption</h3>
-                <p>All data is encrypted using the Web Crypto API (AES-GCM) with master password protection. Your data never leaves your device.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-                </div>
-                <h3>Manual Sync</h3>
-                <p>Export your encrypted vault as a file and import it on another device anytime. You are in control of your backups.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                </div>
-                <h3>Offline-First</h3>
-                <p>Works completely offline. No accounts required, no risk of server breaches, and 100% privacy guaranteed.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </div>
-                <h3>Open Source</h3>
-                <p>Transparent and auditable code. Trust in the code, not in a corporation. Join our community on GitHub.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="security" class="security">
-        <div class="security-container">
-            <div class="security-content">
-                <h2>Security by <span class="gradient-text">Design.</span></h2>
-                <p>OPENLock is built on the principle that security tools should not require trust in a server — only trust in code.</p>
-                <ul class="security-list">
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span><strong>AES-GCM 256-bit</strong> encryption for all sensitive data.</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span><strong>PBKDF2</strong> key derivation with high iteration counts.</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span><strong>Zero-Knowledge</strong> architecture. We never see your data.</span>
-                    </li>
-                    <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        <span><strong>Local Storage</strong> only. No cloud syncing, no trackers.</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="security-image">
-                <div class="security-image-overlay"></div>
-                <div class="lock-viz">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                    <span style="font-weight: 600; font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase;">Military Grade</span>
+        <section id="generate" class="swiss-section">
+            <div class="section-container">
+                <h2 class="section-title">Try Our Password Generator</h2>
+                <div class="swiss-gen-box">
+                    <div class="gen-output-wrap">
+                        <input type="text" id="password-output" readonly value="Click generate...">
+                        <button id="copy-btn" class="swiss-icon-btn" title="Copy to clipboard">Copy</button>
+                    </div>
+                    <div class="gen-controls">
+                        <div class="control-item">
+                            <div class="control-header">
+                                <label>Password Length</label>
+                                <span class="length-display"><span id="length-val">16</span> characters</span>
+                            </div>
+                            <input type="range" id="length-slider" min="8" max="64" value="16" class="slider">
+                        </div>
+                        <div class="control-item options">
+                            <label>Character Types</label>
+                            <div class="checkbox-group">
+                                <label class="swiss-checkbox">
+                                    <input type="checkbox" id="include-uppercase" checked>
+                                    <span class="check-box"></span>
+                                    <span>Uppercase (A-Z)</span>
+                                </label>
+                                <label class="swiss-checkbox">
+                                    <input type="checkbox" id="include-numbers" checked>
+                                    <span class="check-box"></span>
+                                    <span>Numbers (0-9)</span>
+                                </label>
+                                <label class="swiss-checkbox">
+                                    <input type="checkbox" id="include-symbols" checked>
+                                    <span class="check-box"></span>
+                                    <span>Symbols (!@#$...)</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="generate-btn" class="btn-swiss-block">Generate Password</button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="footer-logo">
-            OPENLock &copy; 2026
-        </div>
-        <div class="footer-links">
-            <a href="https://github.com/Hussein35847/OPENLock" target="_blank">GitHub</a>
-            <a href="https://github.com/Hussein35847/OPENLock/issues" target="_blank">Support</a>
-            <a href="#">Privacy Policy</a>
+        <section id="specs" class="swiss-section alt-bg">
+            <div class="section-container">
+                <h2 class="section-title" style="color: var(--bg);">Security Features</h2>
+                <div class="grid-2">
+                    <div class="spec-entry">
+                        <h3>Cryptographically Secure</h3>
+                        <p>Uses Web Crypto API for truly random password generation. No predictable patterns.</p>
+                    </div>
+                    <div class="spec-entry">
+                        <h3>100% Local</h3>
+                        <p>Everything happens on your device. Your passwords are never sent anywhere.</p>
+                    </div>
+                    <div class="spec-entry">
+                        <h3>Open Source</h3>
+                        <p>Fully transparent code. Publicly auditable. No hidden tracking or telemetry.</p>
+                    </div>
+                    <div class="spec-entry">
+                        <h3>Privacy First</h3>
+                        <p>No analytics. No cookies. No data collection. Complete control over your passwords.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="source" class="swiss-section">
+            <div class="section-container">
+                <div class="source-box">
+                    <h2>View the Code</h2>
+                    <p>PassVault is open source. Review the full implementation, run security audits, or contribute to make it even better.</p>
+                    <a href="https://github.com/Hussein35847/OPENLock" target="_blank" class="btn-swiss-outline">GitHub Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="swiss-section contact-section">
+            <div class="section-container">
+                <div class="contact-box">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions or feedback? We'd love to hear from you.</p>
+                    <a href="mailto:webdevhussein@gmail.com" class="contact-email">webdevhussein@gmail.com</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="swiss-footer">
+        <div class="footer-inner">
+            <div class="footer-info">OPENLOCK_CORE // v1.0.4 // 2026</div>
+            <div class="footer-links">
+                <a href="https://github.com/Hussein35847/OPENLock/issues" target="_blank">SUPPORT</a>
+                <a href="https://github.com/Hussein35847" target="_blank">GITHUB</a>
+            </div>
         </div>
     </footer>
 
